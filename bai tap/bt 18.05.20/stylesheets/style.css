@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper-form {
+  width: 25%;
+  padding: 20px;
+  border-right: 1px solid #9999;
+}
+
+.wrapper-table {
+  width: 75%;
+  padding: 20px;
+}
+
+.table thead th {
+  border: none;
+}
+
+.btn-add, .btn-reset {
+  width: 100px;
+}
