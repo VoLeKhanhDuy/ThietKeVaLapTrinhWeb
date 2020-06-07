@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên</title>
+</head>
+<body>
+    <form action="">
+        <fieldset style="width: 400px; height: 440px;">
+
+            <h2>Đăng ký thành viên</h2>
+            <label for="username" max>Tên đăng nhập:</label><br>
+            <input type="text" id="username" name="username" maxlength="30"><br>
+            <label for="pwd">Mật khẩu:</label><br>
+            <input type="password" id="pwd" name="pwd"><br><br>
+
+            Chọn ngày sinh:<br>
+            <input type="date" name="ngaysinh">
+            <br><br>
+
+            Chọn giới tính:<br>
+            <label for="rd1">Nam</label>
+			<input type="radio" name="rd" id="rd1">
+			<label for="rd2">Nữ</label>
+            <input type="radio" name="rd" id="rd2"><br>
+            <br>
+            <label for="ddl">Chọn tỉnh/thành phố:</label>
+            <br>
+			<select name="ddl" id="ddl">
+				<option value="1">Vĩnh Long</option>
+				<option value="2">Trà Vinh</option>
+				<option value="3">Cần Thơ</option>
+				<option value="4">Sóc Trăng</option>
+            </select>
+            <br><br>
+
+            Chọn lĩnh vực quan tâm: <br>
+            <label for="ckb1">Giáo dục</label>
+			<input type="checkbox" name="ckb1" id="ckb1">
+			<label for="ckb2">Kinh tế</label>
+			<input type="checkbox" name="ckb2" id="ckb2">
+			<label for="ckb3">Sức khỏe</label>
+			<input type="checkbox" name="ckb3" id="ckb3">
+			<label for="ckb4">Nông nghiệp</label>
+			<input type="checkbox" name="ckb4" id="ckb4"><br><br>
+            <input type="submit" value="Đăng ký">
+            <input type="reset"  value="Nhập lại"><br>
+        </fieldset>
+    </form>
+</body>
+</html>

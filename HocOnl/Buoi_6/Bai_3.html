@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Đăng ký</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		.flex {
+			display: flex; 
+			align-items: center;			
+			height: 100vh;  
+		}
+	</style>
+</head>
+<body>
+	<div class="flex">
+		<div class="container border" style="width: 600px;">
+			<form action="#" name="formDangKy" method="post" class="needs-validation" onsubmit="return validCheckbox()" novalidate>
+				<h2>Đăng ký thành viên</h2>
+			    <div class="form-group">
+			    	<label for="username">Tên đăng nhập:</label>
+			    	<input type="text" class="form-control" name="username" id="username" placeholder="Nhập tên đăng nhập" style="width:300px" required>
+			        <div class="invalid-feedback">*Vui lòng nhập tên đăng nhập</div>
+			    </div>
+			    <div class="form-group">
+			    	<label for="pass">Mật khẩu:</label><br>
+			    	<input type="password" class="form-control" name="pass" id="pass" style="width:300px" placeholder="Nhập mật khẩu" required>
+			        <div class="invalid-feedback">*Vui lòng nhập mật khẩu</div>
+			    </div>
+			    <div class="form-group">
+			    	<label for="birthday">Chọn ngày sinh:</label>
+			    	<input type="date" class="form-control" name="birthday" id="birthday" style="width:300px" required>
+			    	<div class="invalid-feedback">*Vui lòng chọn ngày sinh</div>
+			    </div>
+
+		    	<label>Chọn giới tính:</label><br>
+		    	<div class="form-group">
+					<div class="custom-control custom-radio custom-control-inline">
+					    <input type="radio" class="custom-control-input" id="male" name="gender" required>
+					    <label class="custom-control-label" for="male">Nam</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" class="custom-control-input" id="female" name="gender" required>
+						<label class="custom-control-label" for="female">Nữ</label>					
+					</div>						
+				</div>	
+			    <div class="form-group">
+			    	<label for="city">Chọn tỉnh/thành phố:</label><br>
+			    	<select name="city" id="city" class="custom-select" style="width:300px" required>
+			    		<option value="" hidden selected>--Lựa chọn--</option>
+			    		<option value="Trà Vinh">Trà Vinh</option>
+			    		<option value="Cà Mau">Cà Mau</option>
+			    		<option value="Bến Tre">Bến Tre</option>
+			    		<option value="Vĩnh Long">Vĩnh Long</option>
+			    		<option value="TP.HCM">TP.HCM</option>
+			    	</select>
+			    	<div class="invalid-feedback">*Vui lòng chọn tỉnh/thành phố</div>
+			    </div>
+			    <div class="form-group">
+			    	<label>Lĩnh vực quan tâm:</label><br>
+					<div class="form-check-inline">
+						<label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="giaoDuc" id="giaoDuc" value="Giáo dục" onclick="checkboxClick()">Giáo dục
+					  	</label>
+					</div>
+					<div class="form-check-inline">
+					  	<label class="form-check-label">
+					   		<input type="checkbox" class="form-check-input" name="kinhTe" id="kinhTe" value="Kinh tế" onclick="checkboxClick()">Kinh tế
+					  	</label>
+					</div>
+					<div class="form-check-inline">
+					  	<label class="form-check-label">
+					    	<input type="checkbox" class="form-check-input" name="sucKhoe" id="sucKhoe" value="Sức khỏe" onclick="checkboxClick()">Sức khỏe
+					  	</label>
+					</div>
+					<div class="form-check-inline">
+					  	<label class="form-check-label">
+					    	<input type="checkbox" class="form-check-input" name="nongNghiep" id="nongNghiep" value="Nông nghiệp" onclick="checkboxClick()">Nông nghiệp
+					  	</label>
+					</div> 
+					<div class="invalid-feedback" id="linhVuc">*Vui lòng chọn ít nhất 1 lĩnh vực quan tâm</div>				
+			    </div>
+			    <div class="form-group">
+			    	<button type="reset" class="btn btn-danger">Nhập lại</button>
+			    	<button type="submit" class="btn btn-success">Đăng ký</button>		    	
+				</div>
+			</form>	
+		</div>
+	</div>
+	<script>
+		(function() {'use strict';
+			window.addEventListener('load', function() {
+		    // Get the forms we want to add validation styles to
+			    var forms = document.getElementsByClassName('needs-validation');
+			    // Loop over them and prevent submission
+			    var validation = Array.prototype.filter.call(forms, function(form) {
+			    	form.addEventListener('submit', function(event) {
+				        if (form.checkValidity() === false) {
+				        	event.preventDefault();
+				        	event.stopPropagation();
+				        }
+				        form.classList.add('was-validated');
+			     	}, false);
+			    });
+		 	}, false);
+		})();
+
+		function validCheckbox() {
+			var ckb1 = document.forms["formDangKy"]["giaoDuc"];
+			var ckb2 = document.forms["formDangKy"]["kinhTe"];
+			var ckb3 = document.forms["formDangKy"]["sucKhoe"];
+			var ckb4 = document.forms["formDangKy"]["nongNghiep"];
+
+			if (ckb1.checked == false && ckb2.checked == false && ckb3.checked == false && ckb4.checked == false)
+			{
+				document.getElementById('linhVuc').style.display = 'block';
+				for (var i = 0; i < 4; i++) {
+					document.getElementsByClassName('form-check-inline')[i].style.color = '#dc3545';
+				}				
+				return false;
+			} 
+
+			return true;
+		}
+
+		function checkboxClick() {			
+			for (var i = 0; i < 4; i++) {
+				document.getElementsByClassName('form-check-inline')[i].style.color = '#28a745';
+			}	
+			document.getElementById('linhVuc').style.display = 'none';			
+		}
+
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Finding HTML Elements by Tag Name</h2>
+    <p>One of many JS HTML methods is getElementsByTagName().</p>
+
+    <div id="main">
+        <p>The DOM is very useful.</p>
+        <p>This example ... the <b>getElementsByTagName</b> methods.</p>
+    </div>
+    <input type="button" value="Click me!!" onclick="changeContent()">
+
+    <script>
+        var x = document.getElementById("main");
+        var y = x.getElementsByTagName("p");
+        function changeContent() {
+            y[1].innerHTML = "Nội dung vừa được thay đổi";
+        }
+
+        
+            
+    </script>
+</body>
+</html>

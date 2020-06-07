@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Bài 7</title>
+    <style>
+        form {
+            margin-left: 350px;
+        }
+
+        h1 {
+            text-align: center;
+           
+        }
+        
+        h5 {
+            margin-bottom: 0;
+            margin-left: 25px;
+            font-style: italic;
+            font-size: 15px;
+        }
+        
+
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-left: 25px;
+            margin-top: 0;
+        }
+
+        td {
+            padding: 10px 110px 10px 5px;
+            text-align: left;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <form action="" style="width: 600px; height: 450px; border: 1px solid black;">
+        <h1>XỬ LÝ SỰ KIỆN</h1>
+
+        <h5>Danh sách sinh viên</h5>
+
+        <table>
+            <tr>
+                <td>1</td>
+                <td>Lâm Thị Mỹ Châu</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Võ Minh Châu</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nguyễn Hoàng Duy</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Nguyễn Khánh Duy</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Võ Lê Khánh Duy</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Trần Thị Mỹ Duyên</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Nguyễn Thị Thùy Dương</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Nguyễn Thanh Hải</td>
+                <td>
+                    <input type="button" value="Xóa" id="idButton">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        window.onload = function() {
+            var getInput = document.getElementsByTagName("input");
+
+            for(var i = 0; i < getInput.length; i++)
+            {
+                getInput[i].addEventListener("click", function() {
+                    var val = confirm("Bạn có muốn xóa?");
+                    if(val)
+                    {
+                        var parent = this.parentElement.parentElement;
+                        parent.remove();
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

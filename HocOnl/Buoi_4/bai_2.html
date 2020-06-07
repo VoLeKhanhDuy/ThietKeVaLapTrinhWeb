@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Finning HTML Elements by Tag Name</h1>
+    <div id="main">
+        <p>Hello worrd!</p>
+        <p>Hello Javascript!</p>
+        <p>This example demonstrales the <strong>getElementsByTagName</strong> methods</p>
+    </div>
+    
+    <button type="button" onclick="myFunction()">Click</button>
+    <button type="button" onclick="reLoad()">Reload</button>
+
+    <script>
+        var x = document.getElementById("main");
+        var y = x.getElementsByTagName("p");
+        function myFunction() {
+            y[1].innerHTML = "Javascript HTML DOM Elements";
+        }
+        function reLoad() {
+            y[1].innerHTML
+        }
+    </script>
+</body>
+</html>

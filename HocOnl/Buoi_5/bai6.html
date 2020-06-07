@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 6</title>
+    <style>
+        .a {
+            margin: 10px 20px;
+        }
+
+        .drop {
+            margin: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="" style="border: 1px solid black; width: 300px;">
+        <div class="a">
+            <h4>FORM TÌM KIẾM</h4>
+
+            Từ khóa:<br>
+            <input type="text" id="idName" onfocus="myFuntion()" onblur="blurFuntion()" required><br>
+            <span hidden id="idSpan" style="color: red;">Vui lòn điền đầy đủ thôn tin</span>
+            <a href="#" id="aIdName" onclick="click_a()">Tìm kiếm nân cao</a>
+            
+            <br>
+
+            <div class="drop" id="idDrop" hidden >
+                Chọn chuyên mục: <br>
+                <select id="z">
+                    <option value="1">CNTT</option>
+                    <option value="2">Điện</option>
+                    <option value="3">Cơ khí</option>
+                    <option value="4">blaaaaaaaa</option>
+                  </select>
+            </div>
+           
+            <input type="submit" value="Tìm kiếm" style="margin: 10px 10px 0 0 ;">
+        </div>
+    </form>
+
+    <script>
+        function myFuntion() {
+            document.getElementById("idName").style.background = "yellow";
+            document.getElementById("idName").style.color = "blue";
+        }
+
+        function blurFuntion() {
+            if(document.getElementById("idName").value == "")
+            {
+                document.getElementById("idSpan").style.display = "block";
+            }
+            else
+            {
+                document.getElementById("idSpan").style.display = "none";
+            }
+        }
+
+        function click_a() {
+            var x = document.getElementById("aIdName");
+
+
+            if(x.innerHTML == "Tìm kiếm nân cao")
+            {
+                document.getElementById("idDrop").style.display = "block";
+                x.innerHTML = "Bỏ tìm kiếm nân cao";    
+            }
+            else {
+                document.getElementById("idDrop").style.display = "none";
+                x.innerHTML = "Tìm kiếm nân cao";  
+            }
+            return false;
+        }
+
+    </script>
+</body>
+</html>

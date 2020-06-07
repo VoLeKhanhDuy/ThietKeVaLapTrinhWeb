@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết kế biểu mẩu - FORM</title>
+</head>
+<body>
+    <form action="" method="POST">
+		<fieldset style="width: 500px; margin-left: 100px;">
+			<legend>Nhập liệu</legend>
+			<label for="data1">Nhập dữ liệu trên một dòng: </label>
+			<input type="text" id="data1"name="data1"><br>
+			<br><br>
+
+			<label for="data">Nhập dữ liệu trên nhiều dòng:</label>
+			<textarea rows="3" cols="20" id="data" name="data"></textarea><br>
+			<br><br>
+
+			<label for="pass">Nhập dữ liệu bảo mật:</label>
+			<input type="password" name="pass" id="pass"><br>
+			<br><br>
+
+			Chọn duy nhất một tùy chọn trong nhóm các tùy chọn: <br>
+			<label for="rd1">Radio 1</label>
+			<input type="radio" name="rd" id="rd1">
+			<label for="rd2">Radio 2</label>
+			<input type="radio" name="rd" id="rd2"><br>
+			<br><br>
+
+			Chọn nhiều tùy chọn trong nhóm các tùy chọn: <br>
+			<label for="ckb1">Checkbox 1</label>
+			<input type="checkbox" name="ckb1" id="ckb1">
+			<label for="ckb2">Checkbox 2</label>
+			<input type="checkbox" name="ckb2" id="ckb2">
+			<label for="ckb3">Checkbox 3</label>
+			<input type="checkbox" name="ckb3" id="ckb3">
+			<label for="ckb4">Checkbox 4</label>
+			<input type="checkbox" name="ckb4" id="ckb4"><br>
+			<br><br>
+
+			Chọn một giá trị từ danh sách có sẳn: <br>
+			<label for="ddl">Dropdown list</label>
+			<select name="ddl" id="ddl">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+			<br><br>
+			
+			<label for="ddlm" multiple>Dropdown list</label>
+			<select id="ddlm" name="ddlm" multiple>
+	 			<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+			<br><br>
+
+			Chọn tập tin từ máy tính: <br>
+			<label for="file">Chọn tập tin</label>
+			<input type="file" name="file" id="file">
+			<br><br>
+			
+			Thực thi form khi được click chọn: <br>
+			<label for="submit">Gửi</label>
+			<input type="submit" name="submit" id="submit" value="submit">
+			<br><br>
+
+			Khôi phục giá trị: <br>
+			<label for="reset">Reset</label>
+			<input type="reset" name="reset" id="reset" value="reset"><br>
+		</fieldset>
+	</form>
+</body>
+</html>

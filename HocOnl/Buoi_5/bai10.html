@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên</title>
+    <style>
+        span {
+            color: red;
+        }
+        form {
+            margin-left: 380px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" name="formDangKy" onsubmit="return validForm()">
+		<fieldset style="width: 500px;">
+			<h2>Đăng ký thành viên</h2>
+
+			<label for="username">Tên đăng nhập:</label><br>
+			<input type="text" name="username" id="username" onblur="blurSpan(this, 0)">
+			<span class="alert" hidden>Tên đăng nhập không được bỏ trống</span><br>
+
+			<label for="pass">Mật khẩu:</label><br>
+			<input type="password" name="pass" id="pass" onblur="blurSpan(this, 1)"><br>
+			<span class="alert" hidden>Mật khẩu không được bỏ trống</span><br>
+
+			<label for="birthday">Chọn ngày sinh:</label><br>
+			<input type="date" name="birthday" id="birthday" onblur="blurSpan(this, 2)"><br>
+			<span class="alert" hidden>Lựa chọn</span><br>
+
+			<label>Chọn giới tính:</label><br>
+			<label for="male">Nam</label>
+			<input type="radio" name="gender" id="male" value="Nam" onclick="radioClick()">
+			<label for="female">Nữ</label>
+			<input type="radio" name="gender" id="female" value="Nữ" onclick="radioClick()"><br>
+			<span class="alert" hidden>Lựa chọn</span><br>
+
+			<label for="city">Chọn tỉnh/thành phố:</label><br>
+			<select name="city" id="city" onblur="blurSpan(this, 4)">
+				<option value="" hidden selected>-- Lựa chọn --</option>
+				<option value="Trà Vinh">Trà Vinh</option>
+				<option value="Cà Mau">Cà Mau</option>
+				<option value="Bến Tre">Bến Tre</option>
+				<option value="Vĩnh Long">Vĩnh Long</option>
+				<option value="TP.HCM">TP.HCM</option>
+			</select><br>
+			<span class="alert" hidden>Lựa chọn</span><br>
+			
+			<label>Lĩnh vực quan tâm:</label><br>
+			<label for="giaoDuc">Giáo dục</label>
+			<input type="checkbox" name="giaoDuc" id="giaoDuc" value="Giáo dục" onclick="checkboxClick()">
+			<label for="kinhTe">Kinh tế</label>
+			<input type="checkbox" name="kinhTe" id="kinhTe" value="Kinh tế" onclick="checkboxClick()">
+			<label for="sucKhoe">Sức khỏe</label>
+			<input type="checkbox" name="sucKhoe" id="sucKhoe" value="Sức khỏe" onclick="checkboxClick()">
+			<label for="nongNghiep">Nông nghiệp</label>
+			<input type="checkbox" name="nongNghiep" id="nongNghiep" value="Nông nghiệp" onclick="checkboxClick()"><br>
+			<span class="alert" hidden>Chọn ít nhất 1</span><br>
+
+			<input type="submit" name="register" id="register" value="Đăng ký">
+			<input type="reset" name="reset" id="reset" value="Nhập lại">
+		</fieldset>
+	</form>
+
+    <script>
+        function blurSpan(x, i) {
+			if (x.value == ""){
+				document.getElementsByClassName('alert')[i].style.display = 'block';
+			} else {
+				document.getElementsByClassName('alert')[i].style.display = 'none';
+			}
+		}
+		function validForm(arguments) {
+			var tenDK = document.forms["formDangKy"]["username"];
+			var MK = document.forms["formDangKy"]["pass"];
+			var ngaySinh = document.forms["formDangKy"]["birthday"];
+			var city = document.forms["formDangKy"]["city"];
+			var gender = document.forms["formDangKy"]["gender"];
+			var ckb1 = document.forms["formDangKy"]["giaoDuc"];
+			var ckb2 = document.forms["formDangKy"]["kinhTe"];
+			var ckb3 = document.forms["formDangKy"]["sucKhoe"];
+			var ckb4 = document.forms["formDangKy"]["nongNghiep"];
+
+			var tmp = 0;
+			
+			if(tenDK.value == ""){
+				document.getElementsByClassName('alert')[0].style.display = 'block';
+				tmp++;
+			} 
+			if (MK.value =="") {
+				document.getElementsByClassName('alert')[1].style.display = 'block';
+				tmp++;
+			} 
+			if (ngaySinh.value == "") {
+				document.getElementsByClassName('alert')[2].style.display = 'block';
+				tmp++;
+			} 
+			if (city.value =="") {
+				document.getElementsByClassName('alert')[4].style.display = 'block';
+				tmp++;
+			}
+			if (gender.value == "")
+			{
+				document.getElementsByClassName('alert')[3].style.display = 'block';
+				tmp++;
+			}
+			if (ckb1.checked == false && ckb2.checked == false && ckb3.checked == false && ckb4.checked == false)
+			{
+				document.getElementsByClassName('alert')[5].style.display = 'block';
+				tmp++;
+			} 
+
+			if(tmp > 0) return false;
+			else return true;
+		}
+		function radioClick() {
+			document.getElementsByClassName('alert')[3].style.display = 'none';		
+		}
+		function checkboxClick() {
+			document.getElementsByClassName('alert')[5].style.display = 'none';		
+		}
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<style>
+		*{
+			font-family: arial;
+    	font-size: 14px;
+    	line-height: 20px;
+    	border: 0;
+		}
+		body
+		{
+			margin: 30px;
+			text-align: justify;
+		}
+
+		table, th, td, tr{
+			border: 1px solid black;
+  			border-collapse: collapse;
+  			padding: 10px;
+		}
+		table{
+			width: 100%;
+		}
+		th, td{
+			  padding: 5px;
+			  text-align: left;
+			}
+
+		tr:nth-child(even){background-color: #f2f2f2}
+
+		th {
+  				background-color: #4CAF50;
+  				color: white;}
+
+	</style>

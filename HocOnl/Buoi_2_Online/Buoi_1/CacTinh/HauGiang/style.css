@@ -1,0 +1,66 @@
+body
+{
+	font-size: 13pt;
+	width: 1300px;
+	margin: 0px auto;
+	line-height: 25pt
+}
+p
+{
+	font-size: 13pt;
+}
+
+#left 
+{
+	width: 990px;
+	float: left;
+}
+#right
+{
+	width:300px;
+	float: right;
+
+	min-height: 400px
+
+}
+/*tr
+{
+	height: 30px
+}*/
+th
+{
+	width: 90px;
+	border: 1px;
+
+}
+td
+{
+	width: 250px;
+	border: 1px;
+
+}
+tr
+{
+	border: 0px;
+	line-height: 25px;
+}
+#content
+{
+	float: left;
+	width: 1300px;
+}
+td
+{
+	text-align: left;
+}
+#anhdiali
+{
+	width: 300px;
+	float: left;
+
+}
+#nddiali
+{
+	width: 680px;
+	float: right;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            margin-left: 550px;
+        }
+        .nut {
+            margin-left: 400px;
+        }
+
+        input {
+            margin: 0 10px;
+        }
+
+        input:hover {
+            color: white;
+            box-shadow: 2px 5px #888888;
+        }
+
+        .i1 {
+            background-color: aqua; 
+            border: 2px solid red; 
+            padding: 5px; 
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .i2 {
+            background-color: blueviolet; 
+            border: 2px solid red; 
+            padding: 5px; 
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .i3 {
+            background-color: darkgrey; 
+            border: 2px solid red; 
+            padding: 5px; 
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .i4 {
+            background-color: goldenrod; 
+            border: 2px solid red; 
+            padding: 5px; 
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .i5 {
+            background-color: rgb(106, 134, 134); 
+            border: 2px solid red; 
+            padding: 5px; 
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Thay đổi thuộc tính SRC của thẻ img</h1>
+
+    <img id="image" src="hinh/hong_nhung.jpg" alt="Hoa" width="200" height="200">
+
+    <script>
+        function myFunction(anh)
+        {
+            document.getElementById("image").src = anh;
+        }
+    </script>
+    <br><br>
+    <div class="nut">
+        <input class = "i1" type="button" value="Hồng Nhung" onclick="myFunction('hinh/hong_nhung.jpg')">
+        <input class = "i2" type="button" value="Hướng Dương" onclick="myFunction('hinh/huong_duong.jpg')">
+        <input class = "i3" type="button" value="Vạn Thọ" onclick="myFunction('hinh/van_tho.jpg')">
+        <input class = "i4" type="button" value="Cẩm Tú Cầu" onclick="myFunction('hinh/cam_tu_cau.jpg')">
+        <input class = "i5" type="button" value="Hoa Tu Líp" onclick="myFunction('hinh/tu_lip.jpg')">
+    </div>
+    
+
+</body>
+</html>
